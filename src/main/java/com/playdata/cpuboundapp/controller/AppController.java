@@ -21,7 +21,7 @@ public class AppController {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "hello jenkins deploy";
+        return "hello jenkins deploy!!!";
     }
 
     private String getMD5Digest(String input) throws NoSuchAlgorithmException {
