@@ -13,16 +13,16 @@ public class AppController {
 
     @RequestMapping("/hash/{input}")
     public String getDigest(@PathVariable("input") String input) throws NoSuchAlgorithmException {
-        for(int i = 0; i < 100_000; i++) {
+        for(int i = 0; i < 1000; i++) {
             input = getMD5Digest(input);
         }
         return input;
     }
 
- /* @RequestMapping("/hello")
+ @RequestMapping("/hello")
     public String hello() {
         return "❤️오복이❤️";
-    } */
+    } 
 
     private String getMD5Digest(String input) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("MD5");
